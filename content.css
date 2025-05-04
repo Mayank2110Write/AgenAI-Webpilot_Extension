@@ -1,0 +1,178 @@
+/* WebPilot Styles */
+.webpilot-modal {
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .webpilot-hidden {
+    display: none !important;
+  }
+  
+  .webpilot-modal-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: webpilot-fadein 0.3s ease;
+  }
+  
+  .webpilot-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .webpilot-modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #2c3e50;
+  }
+  
+  .webpilot-close {
+    font-size: 24px;
+    color: #7f8c8d;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .webpilot-close:hover {
+    color: #e74c3c;
+  }
+  
+  .webpilot-modal-body {
+    padding: 20px;
+  }
+  
+  .webpilot-modal-body p {
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+  }
+  
+  #webpilot-query {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 15px;
+    font-family: inherit;
+  }
+  
+  #webpilot-generate {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  #webpilot-generate:hover {
+    background-color: #2980b9;
+  }
+  
+  #webpilot-generate:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  #webpilot-loading {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    color: #7f8c8d;
+  }
+  
+  .webpilot-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    margin-right: 10px;
+    animation: webpilot-spin 1s linear infinite;
+  }
+  
+  #webpilot-error {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fee;
+    color: #e74c3c;
+    border-radius: 4px;
+  }
+  
+  /* Custom intro.js styles */
+  .webpilot-tooltip.introjs-tooltip {
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+  }
+  
+  .webpilot-tooltip .introjs-tooltiptext {
+    color: #2c3e50;
+  }
+  
+  .webpilot-tooltip .introjs-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .webpilot-tooltip .introjs-button:hover {
+    background-color: #2980b9;
+    box-shadow: none;
+  }
+  
+  .webpilot-tooltip .introjs-skipbutton {
+    color: #7f8c8d;
+  }
+  
+  .webpilot-tooltip .introjs-arrow.top {
+    border-bottom-color: white;
+  }
+  
+  .webpilot-tooltip .introjs-arrow.bottom {
+    border-top-color: white;
+  }
+  
+  .webpilot-tooltip .introjs-arrow.left {
+    border-right-color: white;
+  }
+  
+  .webpilot-tooltip .introjs-arrow.right {
+    border-left-color: white;
+  }
+  
+  /* Animations */
+  @keyframes webpilot-fadein {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes webpilot-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebPilot</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>WebPilot</h1>
+    <div id="project-controls">
+      <button id="create-project" class="btn">Create Walkthrough Project</button>
+      <div id="project-info" class="hidden">
+        <p>Project created for: <span id="project-url"></span></p>
+        <button id="delete-project" class="btn danger">Delete Project</button>
+      </div>
+    </div>
+    <div id="api-key-section">
+      <h2>OpenAI Settings</h2>
+      <div class="form-group">
+        <label for="api-key">API Key:</label>
+        <input type="password" id="api-key" placeholder="Enter your OpenAI API key">
+      </div>
+      <button id="save-api-key" class="btn">Save API Key</button>
+      <p id="api-key-status"></p>
+    </div>
+    <p class="footer">WebPilot - Interactive Webpage Walkthroughs</p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
